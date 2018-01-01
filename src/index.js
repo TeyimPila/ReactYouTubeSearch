@@ -8,7 +8,6 @@ import VideoDetail from './components/video_detail'
 
 const API_KEY = 'AIzaSyD-qbnaMIYPSnHm7G8DMZATdy1fuSr8l5g';
 
-
 class App extends Component {
 
     constructor(props) {
@@ -19,12 +18,11 @@ class App extends Component {
         };
 
         this.videoSearch({term: 'life is beautiful', setSelected: true})
-        console.log(this.state);
 
     }
 
     videoSearch({term, setSelected}) {
-        console.log(setSelected);
+
         YTSearch({key: API_KEY, term: term}, (videos) => {
             this.setState({
                 videos: videos,
